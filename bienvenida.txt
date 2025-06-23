@@ -1,2 +1,2 @@
-Bienvenido a equipo DevSoft!
-Recuerda seguir nuestra guía de estilo para escribir documentos
+Hola! Te damos la más cordial bienvenida al equipo de desarrollo
+Recuerda seguir nuestra guía de estilo para escribir documentos.
