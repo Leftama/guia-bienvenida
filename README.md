@@ -264,11 +264,29 @@ git push -u origin main
 
 ### Preguntas de Reflexión:
 
-1. ¿Qué fue lo más desafiante al trabajar con ramas y fusiones?
-2. ¿Por qué son importantes los commits frecuentes con mensajes claros?
-3. ¿Cómo Git ayuda a evitar conflictos en trabajo colaborativo?
-4. ¿Qué aprendiste sobre manejo de conflictos?
-5. ¿En qué proyectos aplicarías Git?
+1. **¿Qué fue lo más desafiante al trabajar con ramas y fusiones?**
+   - La resolución de conflictos requiere entender qué cambios mantener
+   - Es importante comunicarse en equipo sobre qué se está modificando
+
+2. **¿Por qué son importantes los commits frecuentes con mensajes claros?**
+   - Permiten rastrear cambios específicos
+   - Facilitan la reversión de errores
+   - Mejoran la colaboración en equipo
+
+3. **¿Cómo Git ayuda a evitar conflictos en trabajo colaborativo?**
+   - Las ramas permiten trabajo paralelo
+   - El sistema de versionado mantiene historial completo
+   - Facilita la integración controlada de cambios
+
+4. **¿Qué aprendiste sobre manejo de conflictos?**
+   - Los conflictos son normales en trabajo colaborativo
+   - Git marca claramente las diferencias
+   - La resolución requiere decisión consciente
+
+5. **¿En qué proyectos aplicarías Git?**
+   - Proyectos de programación
+   - Documentación colaborativa
+   - Cualquier trabajo que requiera control de versiones
 
 ---
 
