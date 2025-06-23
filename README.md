@@ -13,9 +13,10 @@ Un ejercicio paso a paso para aprender Git simulando trabajo colaborativo, manej
 5. [🔄 Fusionar Cambios](#🔄-paso-4-fusionar-cambios-merge)
 6. [⚡ Simular y Resolver Conflictos](#⚡-paso-5-simular-y-resolver-conflictos)
 7. [🌐 Repositorio Remoto](#🌐-paso-6-opcional-repositorio-remoto)
-8. [🤔 Reflexión y Aprendizajes](#🤔-reflexión-y-aprendizajes)
-9. [📚 Comandos Git Aprendidos](#📚-comandos-git-aprendidos)
-10. [🔗 Recursos Adicionales](#🔗-recursos-adicionales)
+8. [🔐 Conexión SSH con GitHub](#🔐-paso-7-conexión-ssh-con-github)
+9. [🤔 Reflexión y Aprendizajes](#🤔-reflexión-y-aprendizajes)
+10. [📚 Comandos Git Aprendidos](#📚-comandos-git-aprendidos)
+11. [🔗 Recursos Adicionales](#🔗-recursos-adicionales)
 
 ---
 
@@ -199,6 +200,66 @@ git push -u origin main
 
 ---
 
+## 🔐 Paso 7: Conexión SSH con GitHub
+
+### ¿Por qué usar SSH?
+
+* ✅ Más seguro: no necesitas escribir contraseñas o tokens
+* ✅ Más conveniente: autenticación automática
+* ✅ Más rápido y estable
+
+### 7.1 Verificar si ya tienes claves SSH
+
+```bash
+ls -la ~/.ssh
+```
+
+### 7.2 Generar nueva clave SSH (si no tienes)
+
+```bash
+ssh-keygen -t ed25519 -C "tu.email@github.com"
+```
+
+### 7.3 Iniciar el agente SSH
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+### 7.4 Copiar tu clave pública
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+### 7.5 Agregar clave SSH a GitHub
+
+1. Ir a GitHub > Settings > SSH and GPG keys
+2. Click en "New SSH key"
+3. Pega la clave copiada
+
+### 7.6 Probar conexión SSH
+
+```bash
+ssh -T git@github.com
+```
+
+### 7.7 Cambiar el repositorio a SSH
+
+```bash
+git remote set-url origin git@github.com:TUUSUARIO/guia-bienvenida.git
+git remote -v
+```
+
+### 7.8 Subir cambios
+
+```bash
+git push -u origin main
+```
+
+---
+
 ## 🤔 Reflexión y Aprendizajes
 
 ### Preguntas de Reflexión:
@@ -225,6 +286,9 @@ git push -u origin main
 | `git log`      | Ver historial de commits        |
 | `git remote`   | Gestionar repositorios remotos  |
 | `git push`     | Subir cambios al remoto         |
+| `ssh-keygen`   | Generar clave SSH               |
+| `ssh-add`      | Agregar clave al agente SSH     |
+| `ssh -T`       | Probar conexión SSH             |
 
 ---
 
@@ -235,7 +299,7 @@ Has completado tu primer ejercicio completo con Git. Ahora dominas los fundament
 * ✅ Gestionar versiones de tus proyectos
 * ✅ Trabajar colaborativamente con ramas
 * ✅ Resolver conflictos de manera efectiva
-* ✅ Sincronizar con repositorios remotos
+* ✅ Sincronizar con repositorios remotos de forma segura
 
 ### 📋 Entregable
 
