@@ -16,7 +16,8 @@ Un ejercicio paso a paso para aprender Git simulando trabajo colaborativo, manej
 8. [🔐 Conexión SSH con GitHub](#🔐-paso-7-conexión-ssh-con-github)
 9. [🤔 Reflexión y Aprendizajes](#🤔-reflexión-y-aprendizajes)
 10. [📚 Comandos Git Aprendidos](#📚-comandos-git-aprendidos)
-11. [🔗 Recursos Adicionales](#🔗-recursos-adicionales)
+11. [🧩 Guía para Nombres de Ramas](#🧩-guía-para-nombres-de-ramas)
+12. [🔗 Recursos Adicionales](#🔗-recursos-adicionales)
 
 ---
 
@@ -307,6 +308,59 @@ git push -u origin main
 | `ssh-keygen`   | Generar clave SSH               |
 | `ssh-add`      | Agregar clave al agente SSH     |
 | `ssh -T`       | Probar conexión SSH             |
+
+---
+
+## 🧩 Guía para Nombres de Ramas
+
+Nombrar ramas de forma clara y consistente es esencial para mantener un historial limpio, facilitar la colaboración y evitar errores. Esta sección proporciona buenas prácticas y ejemplos para estructurar nombres efectivos.
+
+### ✅ Estructura recomendada
+
+```
+[tipo-de-trabajo]/[autor-opcional]-[descripcion-clara]
+```
+
+#### Ejemplos:
+
+* `feature/leftama-agrega-formulario-contacto`
+* `fix/cristianaraya-corrige-conflicto-readme`
+* `docs/mejora-tabla-contenidos`
+* `refactor/reorganiza-estructura-css`
+* `hotfix/leftama-error-produccion`
+
+### 🔖 Prefijos comunes por tipo de rama
+
+| Prefijo     | Uso recomendado                                | Ejemplo                         |
+| ----------- | ---------------------------------------------- | ------------------------------- |
+| `feature/`  | Nuevas funcionalidades                         | `feature/registro-usuarios`     |
+| `fix/`      | Correcciones de bugs o errores                 | `fix/corrige-boton-submit`      |
+| `hotfix/`   | Correcciones urgentes en producción            | `hotfix/parche-login-caido`     |
+| `refactor/` | Reorganización del código sin cambio funcional | `refactor/optimizacion-querys`  |
+| `docs/`     | Cambios en la documentación                    | `docs/agrega-guia-ssh`          |
+| `test/`     | Agregado o modificación de pruebas             | `test/unidad-controlador-login` |
+| `chore/`    | Tareas menores de mantenimiento                | `chore/actualiza-dependencias`  |
+
+### 🧠 Reglas generales
+
+* ✅ Usa **minúsculas** y **guiones** (`kebab-case`) para separar palabras
+* ✅ Sé específico pero conciso
+* ✅ Incluye tu usuario o iniciales si hay varios colaboradores
+* ❌ No uses espacios, tildes ni caracteres especiales
+* ❌ Evita nombres genéricos como `newbranch`, `cambios`, `prueba`
+
+### 🧪 Ejemplos buenos vs. malos
+
+| Buena práctica                      | Mala práctica  |
+| ----------------------------------- | -------------- |
+| `feature/leftama-autenticacion-jwt` | `jwt`          |
+| `docs/cristianaraya-readme-final`   | `final`        |
+| `fix/corrige-enlace-footer`         | `arreglo`      |
+| `refactor/estructura-componentes`   | `nuevacarpeta` |
+
+### 🧭 Consejo final
+
+> Piensa en el nombre de la rama como un **resumen claro de lo que vas a hacer**. Si otro colaborador lo ve, debe poder entender su propósito sin abrirla.
 
 ---
 
